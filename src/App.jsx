@@ -7,7 +7,6 @@ import Pad from "./Pad";
 
 function App() {
   const [newArr, setNewArr] = useState(Pads);
-  console.log(newArr);
   function toggleOnOrOff(id) {
     setNewArr((prevPad) =>
       prevPad.map((pad) => {
