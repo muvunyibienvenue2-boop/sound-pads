@@ -1,16 +1,13 @@
 import { useState } from "react";
 
-export default function Pad({ color, on }) {
-  const [classname, setClassname] = useState(on);
-  const handleStateChange = () => {
-    setClassname(prevName => !prevName);
-  }
+export default function Pad({ color, on , onClick, id}) {
+
   return (
     <>
       <button
         style={{ backgroundColor: color }}
-        className={classname ? "on" : null}
-        onClick={handleStateChange}
+        className={on ? "on" : null}
+        onClick={() => onClick(id)}
       ></button>
     </>
   );
